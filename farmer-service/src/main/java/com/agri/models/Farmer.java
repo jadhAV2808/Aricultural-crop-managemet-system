@@ -11,30 +11,14 @@ public class Farmer {
 	private String name;
 	private String email;
 	private long phoneNo;
-//	private BankDetails bankdetails;
-	private long acconuntNo;
-	private ProductDetails productDeetails;
 	private String password;
-	
-	
-	
-	public long getAcconuntNo() {
-		return acconuntNo;
-	}
-	public void setAcconuntNo(long acconuntNo) {
-		this.acconuntNo = acconuntNo;
-	}
+	private BankDetails bankdetails;	
+	private ProductDetails productdetails;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	public String getName() {
 		return name;
@@ -54,41 +38,48 @@ public class Farmer {
 	public void setPhoneNo(long phoneNo) {
 		this.phoneNo = phoneNo;
 	}
-//	public BankDetails getBankdetails() {
-//		return bankdetails;
-//	}
-//	public void setBankdetails(BankDetails bankdetails) {
-//		this.bankdetails = bankdetails;
-//	}
-	public ProductDetails getProductDeetails() {
-		return productDeetails;
+	public String getPassword() {
+		return password;
 	}
-	public void setProductDeetails(ProductDetails productDeetails) {
-		this.productDeetails = productDeetails;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	
-	
-public Farmer() {	
+	public BankDetails getBankdetails() {
+		return bankdetails;
+	}
+	public void setBankdetails(BankDetails bankdetails) {
+		this.bankdetails = bankdetails;
+	}
+	public ProductDetails getProductdetails() {
+		return productdetails;
+	}
+	public void setProductdetails(ProductDetails productdetails) {
+		this.productdetails = productdetails;
+	}
+	public Farmer(int id, String name, String email, long phoneNo, String password, BankDetails bankdetails,
+			ProductDetails productdetails) {
+		
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.phoneNo = phoneNo;
+		this.password = password;
+		this.bankdetails = bankdetails;
+		this.productdetails = productdetails;
+	}
+
+		
+	public Farmer() {	
 		
 	}
-public Farmer(int id, String name, String email, long phoneNo, long acconuntNo, ProductDetails productDeetails,
-		String password) {
-//	super();
-	this.id = id;
-	this.name = name;
-	this.email = email;
-	this.phoneNo = phoneNo;
-	this.acconuntNo = acconuntNo;
-	this.productDeetails = productDeetails;
-	this.password = password;
-}
-@Override
-public String toString() {
-	return "Farmer [id=" + id + ", name=" + name + ", email=" + email + ", phoneNo=" + phoneNo + ", acconuntNo="
-			+ acconuntNo + ", productDeetails=" + productDeetails + ", password=" + password + "]";
-}
+	@Override
+	public String toString() {
+		return "Farmer [id=" + id + ", name=" + name + ", email=" + email + ", phoneNo=" + phoneNo + ", password="
+				+ password + ", bankdetails=" + bankdetails + ", productdetails=" + productdetails + "]";
+	}
 
-
+		
+	
 
 
 

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.agri.models.Farmer;
+import com.agri.models.ProductDetails;
 import com.agri.repository.FarmerRepository;
 
 @RestController
@@ -25,6 +26,7 @@ public class FarmerController {
 		farmerRepo.save(farmer);
 		return "farmer added with id: "+farmer.getId();
 	}
+	
 	
 	@GetMapping("/getallfarmer")
 	public List<Farmer> getFarmers(){
@@ -41,6 +43,9 @@ public class FarmerController {
 		 farmerRepo.deleteById(Id);
 		 return "farmer deleted from the list with id :" +Id;
 	}
+	
+	
+	
 	
 
 }

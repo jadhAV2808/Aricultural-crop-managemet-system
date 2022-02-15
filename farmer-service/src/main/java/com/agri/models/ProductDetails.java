@@ -2,7 +2,7 @@ package com.agri.models;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Farmer")
+
 public class ProductDetails {
 	
 	private String cropname;
